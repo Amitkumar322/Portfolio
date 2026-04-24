@@ -1,0 +1,59 @@
+/* Large Laptop */
+
+@media (max-width:1200px){
+
+h1{
+font-size:60px;
+}
+
+}
+
+/* Laptop */
+
+@media (max-width:992px){
+
+h1{
+font-size:48px;
+}
+
+section{
+padding:60px 0;
+}
+
+}
+
+/* Tablet */
+
+@media (max-width:768px){
+
+h1{
+font-size:38px;
+}
+
+h2{
+font-size:30px;
+}
+
+}
+
+/* Mobile */
+
+@media (max-width:576px){
+
+h1{
+font-size:28px;
+}
+
+h2{
+font-size:24px;
+}
+
+p{
+font-size:14px;
+}
+
+section{
+padding:40px 0;
+}
+
+}

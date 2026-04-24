@@ -1,0 +1,43 @@
+.footer-heading {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(2.5rem, 8vw, 5rem);
+  letter-spacing: 0.08em;
+  background: linear-gradient(180deg, #ffffff 30%, #333 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.footer-link {
+  color: #666;
+  text-decoration: none;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: color 0.2s;
+}
+
+.footer-link:hover { color: #fff; }
+
+.social-btn {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 1px solid #2a2a2a;
+  background: transparent;
+  color: #888;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 0.85rem;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.social-btn:hover {
+  border-color: #7c6fcd;
+  color: #7c6fcd;
+}
+
+.footer-divider {
+  border-color: #1f1f1f !important;
+}

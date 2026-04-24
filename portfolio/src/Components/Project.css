@@ -1,0 +1,144 @@
+.projects-heading {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(3rem, 8vw, 6rem);
+  letter-spacing: 0.12em;
+  background: linear-gradient(180deg, #ffffff 20%, #666 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* CARD */
+.project-card {
+  background: rgba(17, 17, 17, 0.9);
+  border: 1px solid #1f1f1f !important;
+  border-radius: 18px !important;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+  transition: all 0.35s ease;
+  position: relative;
+}
+
+/* subtle glow effect */
+.project-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 18px;
+  background: linear-gradient(120deg, transparent, rgba(124,111,205,0.15), transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.project-card:hover::before {
+  opacity: 1;
+}
+
+.project-card:hover {
+  border-color: #7c6fcd !important;
+  transform: translateY(-8px) scale(1.01);
+  box-shadow: 0 10px 30px rgba(124, 111, 205, 0.25);
+}
+
+/* MAIN IMAGE */
+.card-img-top-main {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.project-card:hover .card-img-top-main {
+  transform: scale(1.05);
+}
+
+/* SMALL IMAGES */
+.card-img-small {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.card-img-small:hover {
+  transform: scale(1.05);
+}
+
+/* NUMBER */
+.card-number {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2.3rem;
+  color: #2f2f2f;
+  line-height: 1;
+}
+
+/* TECH BADGE */
+.tech-badge {
+  background: rgba(26, 26, 26, 0.8);
+  border: 1px solid #2a2a2a;
+  color: #a78bfa;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  padding: 5px 12px;
+  border-radius: 30px;
+  text-transform: uppercase;
+  transition: all 0.25s ease;
+}
+
+.tech-badge:hover {
+  background: #7c6fcd;
+  color: #fff;
+  border-color: #7c6fcd;
+}
+
+/* BUTTON */
+.live-btn {
+  display: inline-block;
+  text-align: center;
+  background: transparent;
+  border: 1.5px solid #fff;
+  color: #fff;
+  padding: 9px 22px;
+  border-radius: 10px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+}
+
+/* button hover fill animation */
+.live-btn::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #7c6fcd;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+  z-index: -1;
+}
+
+.live-btn:hover::after {
+  transform: scaleX(1);
+}
+
+.live-btn:hover {
+  border-color: #7c6fcd;
+  color: #fff;
+}
+
+/* RESPONSIVE IMPROVEMENT */
+@media (max-width: 768px) {
+  .card-img-top-main {
+    height: 160px;
+  }
+
+  .card-img-small {
+    height: 90px;
+  }
+}

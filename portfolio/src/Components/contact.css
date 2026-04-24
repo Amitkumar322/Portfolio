@@ -1,0 +1,44 @@
+.contact-heading {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(3rem, 10vw, 6rem);
+  letter-spacing: 0.08em;
+  background: linear-gradient(180deg, #ffffff 30%, #555 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+#contact{
+  margin-top: -60px;
+}
+.contact-card {
+  background: #111;
+  border: 1.5px solid #2a2a2a;
+  border-radius: 20px;
+}
+
+.form-control-dark {
+  background: #1a1a1a !important;
+  border: 1px solid #2a2a2a !important;
+  color: #fff !important;
+  border-radius: 10px !important;
+}
+
+.form-control-dark::placeholder { color: #555 !important; }
+.form-control-dark:focus {
+  border-color: #7c6fcd !important;
+  box-shadow: none !important;
+}
+
+.submit-btn {
+  background: #fff;
+  color: #000;
+  border: none;
+  border-radius: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  transition: background 0.2s, color 0.2s;
+}
+
+.submit-btn:hover {
+  background: #7c6fcd;
+  color: #fff;
+}

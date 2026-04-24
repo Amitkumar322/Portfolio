@@ -1,0 +1,17 @@
+:root{
+
+--primary:#6c63ff;
+--secondary:#ff7b54;
+
+--dark:#000;
+--light:#fff;
+
+--gradient:linear-gradient(90deg,#6c63ff,#ff7b54);
+
+--radius:12px;
+
+--container:1200px;
+
+--transition:0.3s ease;
+
+}

@@ -1,0 +1,21 @@
+.text{
+   font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(2.5rem, 8vw, 5rem);
+  letter-spacing: 0.08em;
+  background: linear-gradient(180deg, #ffffff 30%, #333 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.illust-10{
+    width: 300px;
+    filter: blur(4px);
+    margin-top: -12%;
+    margin-left: -3%;
+}
+@media screen and (max-width:768px) {
+    .illust-10{
+        width:250px;
+        margin-top:-45%;
+        margin-left: -30%;
+    }
+}

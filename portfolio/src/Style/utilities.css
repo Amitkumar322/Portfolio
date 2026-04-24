@@ -1,0 +1,37 @@
+.text-center{
+text-align:center;
+}
+
+.flex-center{
+display:flex;
+align-items:center;
+justify-content:center;
+}
+
+.grid-2{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+}
+
+.grid-3{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:30px;
+}
+
+.rounded-xl{
+border-radius:20px;
+}
+
+.shadow-soft{
+box-shadow:0 10px 30px rgba(0,0,0,0.3);
+}
+
+.mt-40{
+margin-top:40px;
+}
+
+.mt-80{
+margin-top:80px;
+}

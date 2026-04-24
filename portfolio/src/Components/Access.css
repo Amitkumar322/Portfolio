@@ -1,0 +1,66 @@
+
+.quick-section {
+  background: #0a0a0a;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.quick-heading {
+ font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(2.5rem, 8vw, 5rem);
+  letter-spacing: 0.08em;
+  background: linear-gradient(180deg, #ffffff 30%, #333 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.quick-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.quick-card {
+  background: #111;
+  border: 1px solid #2a2a2a;
+  border-radius: 14px;
+  padding: 30px 20px;
+  transition: all 0.3s ease;
+}
+
+.quick-card:hover {
+  transform: translateY(-8px);
+  border-color: #fff;
+}
+
+.quick-card h3 {
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.quick-card p {
+  color: #888;
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+}
+
+.quick-card button {
+  background: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.quick-card button:hover {
+  background: #fff;
+  color: #000;
+}
+
+
+
+
