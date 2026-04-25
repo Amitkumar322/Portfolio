@@ -14,7 +14,7 @@ const sendEmail = async ({ name, email, subject, message }) => {
     to: process.env.EMAIL_USER,
     subject: `Portfolio: ${subject}`,
     html: `
-      <h2>New Contact Form Submission</h2>
+      <h2>New Project Enquiry Form Submission</h2>
       <p><b>Name:</b> ${name}</p>
       <p><b>Email:</b> ${email}</p>
       <p><b>Subject:</b> ${subject}</p>

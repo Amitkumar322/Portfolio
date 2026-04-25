@@ -6,10 +6,7 @@ export const Contact = () => {
   const [formData, setFormData] = useState({
     name: "", email: "", subject: "", message: ""
   });
-
   const [status, setStatus] = useState("");
-
-  const API = import.meta.env.VITE_API_URL;
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -17,22 +14,12 @@ export const Contact = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
-    if (!formData.name || !formData.email || !formData.subject || !formData.message) {
-      setStatus("error");
-      return;
-    }
-
     setStatus("sending");
-
     try {
-      await axios.post(`${API}/api/contact`, formData);
-
+      await axios.post("http://localhost:5000/api/contact", formData);
       setStatus("success");
       setFormData({ name: "", email: "", subject: "", message: "" });
-
-    } catch (error) {
-      console.error(error);
+    } catch {
       setStatus("error");
     }
   };
@@ -45,44 +32,42 @@ export const Contact = () => {
       </p>
 
       <div className="contact-card p-4 p-md-5 w-100" style={{ maxWidth: "700px" }}>
-        <form onSubmit={handleSubmit} className="row g-3">
+        <div className="row g-3">
 
           <div className="col-md-6">
+            <label className="text-secondary small text-uppercase mb-1">Name</label>
             <input name="name" value={formData.name} onChange={handleChange}
               type="text" className="form-control form-control-dark py-3" placeholder="Your Name" />
           </div>
 
           <div className="col-md-6">
+            <label className="text-secondary small text-uppercase mb-1">Email</label>
             <input name="email" value={formData.email} onChange={handleChange}
               type="email" className="form-control form-control-dark py-3" placeholder="your@email.com" />
           </div>
 
           <div className="col-12">
+            <label className="text-secondary small text-uppercase mb-1">Subject</label>
             <input name="subject" value={formData.subject} onChange={handleChange}
               type="text" className="form-control form-control-dark py-3" placeholder="Project Subject" />
           </div>
 
           <div className="col-12">
+            <label className="text-secondary small text-uppercase mb-1">Message</label>
             <textarea name="message" value={formData.message} onChange={handleChange}
               className="form-control form-control-dark py-3" rows={5} placeholder="Tell me about your project..." />
           </div>
 
           <div className="col-12">
-            <button type="submit" className="submit-btn w-100 py-3 fs-6"
+            <button onClick={handleSubmit} className="submit-btn w-100 py-3 fs-6"
               disabled={status === "sending"}>
               {status === "sending" ? "SENDING..." : "SEND MESSAGE ↗"}
             </button>
-
-            {status === "success" && (
-              <p className="text-success mt-2">Message sent successfully! ✅</p>
-            )}
-
-            {status === "error" && (
-              <p className="text-danger mt-2">Something went wrong or fields missing ❌</p>
-            )}
+            {status === "success" && <p className="text-success mt-2">Message sent successfully! ✅</p>}
+            {status === "error" && <p className="text-danger mt-2">Something went wrong. Try again.</p>}
           </div>
 
-        </form>
+        </div>
       </div>
     </section>
   );
